@@ -59,6 +59,10 @@ export default function Router() {
             ],
         },
         { path: '*', element: <Navigate to="/404" replace /> },
+        {
+            path: 'viewer',
+            element: <ViewerPage />,
+        },
     ]);
 }
 
@@ -72,3 +76,4 @@ const PageAssetsHub = Loadable(lazy(() => import('../pages/AssetsHub')));
 
 const PageEmpty = Loadable(lazy(() => import('../pages/Empty')));
 const Page404 = Loadable(lazy(() => import('../pages/NoMatch')));
+const ViewerPage = Loadable(lazy(() => import('../pages/ViewerPage')));
